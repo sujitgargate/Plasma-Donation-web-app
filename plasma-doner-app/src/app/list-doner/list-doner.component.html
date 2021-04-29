@@ -1,0 +1,25 @@
+<table>
+    <thead>
+        <tr>
+            <th> Index </th>
+            <th> City name</th>
+            <th> Count of plasma doners </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let city of city;let i=index">
+            <td>{{ i+1 }} </td>
+            <td>{{city}}</td>
+            <td>{{fd}} {{countOfDoners[i]}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<form #requestPlasmaForm="ngForm">
+    <label> Enter Email </label>
+    <input type="text" name="email" ngModel id="email" #email="ngModel">
+
+    <button class="btn btn-primary" (click)="onRequestPlasma(requestPlasmaForm.value)" routerLink='/notify' >Request
+        Plasma</button>
+
+</form>

@@ -1,0 +1,38 @@
+<h1>You are doing great by donating your plasma</h1>
+<h2 class="paragraph">Your age should be between 18-60 years to donate your plasma</h2>
+
+
+<form class="form-inline" #userDetails="ngForm">
+  <div class="userDetails">
+
+    <label>Enter Your name</label>
+    <input type="text" name="name" ngModel id="name" #name="ngModel">
+    <label>Enter Your Email</label>
+    <input type="email" name="email" ngModel id="email" #email="ngModel">
+    <label>Enter Your Mobile</label>
+    <input type="text" name="mobileNumber" ngModel id="mobileNumber" #mobileNumber="ngModel">
+    <br>
+    <label>Enter Your blood group</label>
+    <input type="text" name="bloodGroup" ngModel id="bloodGroup" #bloodGroup="ngModel">
+    <label>Enter Your aadhar</label>
+    <input type="text" name="aadhar" ngModel id="aadhar" #aadhar="ngModel">
+    <label>Enter Your city</label>
+    <input type="text" name="city" ngModel id="city" #city="ngModel">
+  </div>
+
+  <div class="form-group">
+    <div class="input-group">
+      <label>Enter your birth date</label>
+      <input class="form-control" placeholder="yyyy-mm-dd" name="calender" [(ngModel)]="model" ngbDatepicker
+        #calendar="ngbDatepicker">
+      <div class="input-group-append">
+        <button class="btn btn-outline-secondary calendar" (click)="calendar.toggle()" type="button"></button>
+      </div>
+    </div>
+  </div>
+
+  <button class="btn btn-primary" type="submit" (click)="onSubmit(userDetails)">Submit</button>
+
+</form>
+
+<button id="loginButton" class="btn btn-primary">Login TO Communicate directly</button>
